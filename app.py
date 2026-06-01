@@ -13,7 +13,7 @@ st.title("Organic vs Synthetic Fiber Degradation Model")
 st.markdown(
     """
     This app compares how quickly organic and synthetic fibers break down in soil.
-    It uses experimental mass-loss data from two sources and models the fraction of each fiber remaining over time.
+    It uses mass-loss data from two sources and models the fraction of each fiber remaining over time.
     """
 )
 
@@ -148,24 +148,9 @@ def fit_models(data):
 
 results_df = fit_models(df)
 
-st.sidebar.header("Display Options")
-
-selected_fibers = st.sidebar.multiselect(
-    "Select fibers to display",
-    options=list(df["Fiber"].unique()),
-    default=list(df["Fiber"].unique())
-)
-
-max_days = st.sidebar.slider(
-    "Maximum days shown on graph",
-    min_value=120,
-    max_value=500,
-    value=300,
-    step=30
-)
-
-filtered_df = df[df["Fiber"].isin(selected_fibers)]
-filtered_results = results_df[results_df["Fiber"].isin(selected_fibers)]
+filtered_df = df.copy()
+filtered_results = results_df.copy()
+max_days = 500
 
 st.subheader("Model Results")
 
