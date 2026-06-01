@@ -21,7 +21,7 @@ st.subheader("Model Used")
 
 st.markdown(
     """
-    The app uses an **exponential decay model**:
+    Uses an **exponential decay model**:
     """
 )
 
@@ -38,7 +38,7 @@ st.subheader("How the Model Is Fit")
 
 st.markdown(
     """
-    Although the model is exponential, the app estimates \(k\) using **linear regression**.
+    Although the model is exponential, we estimate \(k\) using **linear regression**.
     First, the mass-loss data is converted into fraction remaining:
     """
 )
@@ -47,7 +47,7 @@ st.latex(r"R = 1 - \frac{\text{mass lost percent}}{100}")
 
 st.markdown(
     """
-    Then the app takes the natural log of the exponential model:
+    Then we take the natural log of the exponential model:
     """
 )
 
@@ -56,7 +56,7 @@ st.latex(r"\ln(R) = -kt")
 st.markdown(
     """
     This changes the exponential model into a linear relationship.
-    The app fits a straight line between time and the natural log of the fraction remaining.
+    We fit a straight line between time and the natural log of the fraction remaining.
     The slope of that line is \(-k\), so the degradation speed is the negative of the slope.
     """
 )
@@ -74,7 +74,7 @@ st.subheader("Main Output")
 
 st.markdown(
     """
-    After finding the degradation speed, the app calculates how many days it takes until only half of the fiber remains:
+    After finding the degradation speed, we calculate how many days it takes until only half of the fiber remains:
     """
 )
 
