@@ -12,7 +12,7 @@ st.title("Organic vs Synthetic Fiber Degradation Model")
 
 st.markdown(
     """
-    This app compares how quickly organic and synthetic fibers break down in soil.
+    Compares how quickly organic and synthetic fibers break down in soil.
     It uses mass-loss data from two sources and models the fraction of each fiber remaining over time.
     """
 )
